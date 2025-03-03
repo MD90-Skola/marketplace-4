@@ -1,0 +1,244 @@
+
+/* Stil fÃ¶r tabellen */
+
+
+
+header {
+  background-image: url("Assets/Img/home.jpg"); 
+  background-size: cover; 
+  background-position: calc(50% - 20px) top; /* Flytta bilden 20px Ã¥t vÃ¤nster */
+  background-repeat: no-repeat;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  background-attachment: fixed; /* GÃ¶r att bilden inte rÃ¶r sig vid skrollning */
+
+
+}
+
+
+
+
+.box {
+  position: relative;
+  top: 35px;
+  margin-left: 55px;
+  margin-right: 20px;
+  width: 140px;
+  height: 150px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column; /* Eller row om de ska vara horisontella */
+  gap: 10+px; /* 10px mellan varje element */
+  margin-top: 60px
+
+
+
+
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.box p {
+  margin: 0;
+  font-size: 1em;
+}
+
+
+.box:hover {
+
+
+  position: relative;
+  
+  transform: translateY(-5px); /* Lyft upp formen lite */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Starkare skugga */
+}
+
+
+
+
+
+
+/* vÃ¤nster boxarna */
+
+
+
+
+
+
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px; /* Rundade hÃ¶rn */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Skugga fÃ¶r svÃ¤vande effekt */
+  width: 50%;
+  margin: 20px auto; /* Centrerar formulÃ¤ret */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smidig Ã¶vergÃ¥ng */
+}
+
+
+
+form {
+  position: relative;
+  left: 00px;
+  top: -620px; /* Flyttar formulÃ¤ret 10px uppÃ¥t */
+}
+
+
+form:hover {
+
+
+  position: relative;
+  left: 0px;
+  transform: translateY(-5px); /* Lyft upp formen lite */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Starkare skugga */
+}
+
+/* Stil fÃ¶r navigationslÃ¤nkarna */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  transition: 0.3s ease-in-out; /* LÃ¤gger till en mjuk Ã¶vergÃ¥ng */
+}
+
+/* Hover-effekt: blÃ¥tt sken */
+nav a:hover {
+  background-color: rgba(0, 123, 255, 0.7); /* BlÃ¥ bakgrund */
+  border-radius: 5px; /* Rundade kanter */
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.8); /* BlÃ¥tt sken */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+/* Stil fÃ¶r knapparna i tabellen */
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+/* Stil fÃ¶r modalens bakgrund */
+#popupModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent svart bakgrund */
+  z-index: 1000; /* Se till att den ligger ovanpÃ¥ andra element */
+  display: none; /* DÃ¶lj detta lager tills det behÃ¶vs */
+}
+
+/* Stil fÃ¶r modalens innehÃ¥ll */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Definiera en fast bredd */
+  margin: auto; /* Centrerar innehÃ¥llet i flex container */
+}
+
+/* Om du vill att modalen ska flytta sig lite frÃ¥n centrum fÃ¶r designÃ¤ndamÃ¥l, kan du anvÃ¤nda denna transform */
+.modal-content {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+.min-tabell {
+  position: relative;    /* Gör det möjligt att flytta elementet */
+  left: px;           /* Flyttar tabellen 50px åt höger */
+  top: -450px;            /* Flyttar tabellen 20px nedåt */
+  background-color: #f5f5f5;
+}
+
+
+/* Stil fÃ¶r tabellhuvudet */
+table thead {
+  background-color: #7b7885;
+  color: white;
+}
+
+table th, table td {
+  padding: 1px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* RadfÃ¤rger fÃ¶r bÃ¤ttre lÃ¤sbarhet */
+table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Hover-effekt */
+table tbody tr:hover {
+  background-color: hsl(206, 100%, 96%);
+}

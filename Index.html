@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skapa annons</title>
+    <link rel="icon" href="Assets/Img/market.png" type="image/x-icon" />
+    <style>
+      /* Universal Selector */ 
+      /*
+        Explanation: Selects all elements on the page.
+        Use Case: Apply a default style to all elements.
+        */
+      * {
+        margin: 0;
+      }
+
+      /* Tag Selector */
+      /* BYTT NAMN TILL index.html */
+      /*
+        Explanation: Selects all elements of a specific type.
+        Use Case: Style all elements of a particular type, like all paragraphs or headers.
+        */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #eeeeee; 
+      }
+
+      header {
+        background-color: #1d1b1b;
+        color: #fff;
+
+        padding: 20px;
+
+        text-align: center;
+
+        font-size: 32px;
+      }
+
+      /* Tag Selector */
+      nav {
+        background-color: #7e7e7e;
+        padding: 10px;
+
+        text-align: center;
+      }
+
+      /* Tag Selector */
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        /*Margins are used to create space around elements, outside of any defined borders.*/
+      }
+
+      /* Class Selector */
+      .container {
+        padding: 20px;
+        color: #333;
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="formstyrle.css" />
+   
+  </head>
+
+
+  
+
+
+  <body>
+    <header>
+      <h1>skapa annons <br>
+        <br>
+
+      </h1>
+    </header>
+
+    <nav>
+      <a href="#">Hem</a>
+      <a href="#">Logga-in</a>
+      <a href="#">Registrera</a>
+      <a href="#">Kontakt</a>
+    </nav>
+
+
+
+
+    <!-- Modal för Basic -->
+    <div id="popupModal" class="popupModal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Här är din text för Basic!</p>
+      </div>
+  </div>
+
+  <!-- Modal för Plus -->
+  <div id="plusModal" class="popupModal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Här är din text för Plus!</p>
+      </div>
+  </div>
+
+  <!-- Modal för Premium -->
+  <div id="premiumModal" class="popupModal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Här är din text för Premium!</p>
+      </div>
+  </div>
+
+  <!-- Bilder och beskrivningar för varje tjänstepaket -->
+  <div class="box box-basic">
+      <img id="basicImage" src="Assets/Img/basic.png" alt="Basic" style="cursor: pointer;">
+      <p>Basic</p>
+  </div>
+
+  <div class="box box-plus">
+      <img id="plusImage" src="Assets/Img/plus.png" alt="Plus" style="cursor: pointer;">
+      <p>Plus</p>
+  </div>
+
+  <div class="box box-premium">
+      <img id="premiumImage" src="Assets/Img/premium.png" alt="Premium" style="cursor: pointer;">
+      <p>Premium</p>
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Formuläret -->
+  <form id="annonsskapare">
+    <h2>Fyll i formuläret</h2>
+    
+    <!-- 1. Namn -->
+    <label for="fn">Namn</label>
+    <input type="text" id="fn" placeholder="Exempel: Anders Andersson" />
+
+    <!-- 2. Yrke -->
+    <label for="ln">Yrke</label>
+    <input type="text" id="ln" placeholder="Exempel: Lagerarbetare" />
+
+    <!-- 3. E-post -->
+    <label for="email">E-post</label>
+    <input type="text" id="email" placeholder="Exempel: namn@mail.com" />
+
+    <!-- 4. Paket -->
+    <label for="paket">Paket</label>
+    <select id="paket">
+      <option value="Basic">Basic</option>
+      <option value="Plus">Plus</option>
+      <option value="Premium">Premium</option>
+    </select>
+
+    <!-- 5. Betalning -->
+    <label for="betalning">Betalning</label>
+    <select id="betalning">
+      <option value="klarna">Klarna</option>
+      <option value="Swish">Swish</option>
+      <option value="Överföring">Överföring</option>
+    </select>
+
+    <!-- 6. Frågor -->
+    <label for="description">Frågor / Övrigt</label>
+    <textarea id="description" placeholder="Skriv dina frågor här..."></textarea>
+
+    <button type="submit">Skicka</button>
+  </form>
+
+  <!-- Tabell för annonserna -->
+  <table class="min-tabell">
+    <thead>
+      <tr>
+        <th>Namn</th>
+        <th>Yrke</th>
+        <th>E-post</th>
+        <th>Paket</th>
+        <th>Betalning</th>
+        <th>Frågor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Nya annonser hamnar här dynamiskt -->
+    </tbody>
+  </table>
+
+  <script src="send.js"></script>
+
+
+
+
+
+        </tbody>
+      </table>
+    </main>
+
+    <footer
+
+  
+    <footer
+    style="
+      background-color: black;
+      color: rgb(250, 250, 250);
+      text-align: center;
+      padding: 30px;
+    "
+  >
+    Copyright &copy; Michel Dahl / MicronAB
+  </footer>
+
+
+    
+   
+
+
+
+
+  </body>
+
+  
+
+</html>
